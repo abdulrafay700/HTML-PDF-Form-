@@ -1,0 +1,336 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+body {
+    display: flex;
+    justify-content: center;
+}
+
+:root{
+    --main-color:#17255b;
+    --main-color2:#46aabf;
+    --main-color3:#0f55f3;
+    --main-color4:#1873D3;
+    --main-color5:#00017a;
+    --main-color6:#1237A1;
+    --main-color7:#0fcef3;
+    --yellow-color:#FFDE00;
+    --secondary-color:#354275;
+    --paper:#bcbdbfae;
+    --evenrow-color:#bcbdbf4f;
+
+}
+
+.wrapper{
+    width: 80%;
+    height: auto;
+    border:1px solid black;
+    /* background-color: var(--paper); */
+    backdrop-filter: blur(50px);   
+    display: flex;
+    flex-direction: column;
+}
+.section{
+    width: 100%;
+}
+header{
+    width: 100%;
+    height: 220px;
+    background-color: var(--main-color4);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    /* align-items: flex-end; */
+    /* justify-content: center; */
+
+}
+
+.header-wrap{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.logo{
+    width: 180px;
+    height: 180px;
+    background-color: var(--yellow-color);
+    margin-top: 12px;
+}
+
+.your-info-container{
+    display: flex;
+    gap: 40px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.site-adress {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.site-adress p {
+    margin-left: 5px;
+    transform: translateY(2px);
+}
+.site-adress i{
+    color: var(--yellow-color);
+    margin-right: 5px;
+    font-size: 20px;
+}
+/* sender-section */
+
+
+.sender-section{
+    width: 100%;
+    height: 220px;
+    /* background-color: white; */
+    background: linear-gradient(270deg, rgb(105 105 105 / 25%) -32.86%, rgb(255, 255, 255) 104.88%);    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.sender-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.sender-Add, .sender-mail , .sender-phone{
+    display: flex;
+}
+
+
+.sender-section .sender-content .sender-name{
+    color: var(--main-color4);
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sender-section .sender-content p:nth-child(1){
+    font-weight: 900;
+}
+
+.sender-section .sender-content p:nth-child(3){ /* for director */
+    margin-bottom: 10px;
+    
+}
+
+/*   */
+.sender-section .sender-content p:nth-child(2){   
+    margin-bottom: 5px;
+} 
+
+.invoice-colum{
+    display: flex;
+    flex-direction: column;
+    color: #393939;
+}
+
+.invoice-colum  .invoice-logo{
+    font-size: 4.5vw;
+    color: var(--main-color6);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-shadow: 3px 6px 4px white;
+}
+
+.invoice-colum .invoice-number ,  .account-number{
+    display: flex;
+    font-size: 1vw;
+    color: #393939;
+}
+.invoice-Date{
+    display: flex;
+    font-size: 1vw;
+}
+/* sender-section end */
+
+
+/* Table section start */
+
+.table-section{
+    width: 100%;
+    height: auto;
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  table caption {
+    font-size: 1.7em;
+    background-color: var(--main-color4);
+    color: white;
+    font-weight: 700;
+  }
+  
+  .statement-summary{  /* caption design for shipment details */
+    margin: .75em 0px 0em 0px;
+  }
+  thead tr:nth-child(1){
+    /* background-color: #f0d40c; */
+    background-color: var(--yellow-color);
+  }
+
+  .main-table tr:nth-child(even){
+    background-color: var(--evenrow-color);
+  }
+
+  /* table tr:nth-child(odd){
+    background-color: var(--main-color4);
+  } */
+  table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+  
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  .Total-Dues{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+  
+  .row{
+    display: flex;
+    gap: 20px;
+  }
+  /* TOTAL PRICE DESING */
+    .total-section{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 50px;
+        text-align: center;
+    }  
+  
+    .left-side-price {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 1.4vw;
+    }
+
+  .right-side-price{
+    width: 30%;
+  }
+
+  .right-side-price tr , tr{
+   background-color: transparent;
+}
+
+
+.pricetag{
+    text-transform: capitalize;
+}
+
+
+.table-for-total-price .grand-total-row{
+    background-color: var(--yellow-color);
+    font-size: 1.2vw;
+}
+.table-for-total-price .grand-total{
+    color: var(--main-color3) !important;
+    /* color: rgb(0, 0, 0); */
+    font-weight: 900;
+    font-size: 1.2vw;
+}
+
+/* footer */
+
+footer{
+
+    width: 100%;
+    font-size: 12px;
+    padding: 0px 2rem;
+    margin: 2rem;
+
+}
+footer  h6{
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+footer ul{
+    margin-left: 15px;
+    color: var(--main-color5);
+}
+footer::before, footer::after{
+    content: "";
+    display: block;
+    width: 95%;
+    height: 1px;
+ 
+    background-color: black;
+    
+}
